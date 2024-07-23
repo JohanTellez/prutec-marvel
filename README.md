@@ -1,27 +1,51 @@
-# PrutecMarvel
+## Requerimientos
+Node.js: Versión 20.11.0. Puedes descargarlo desde nodejs.org.
+Angular CLI: Versión 17.2.2. Instalar o actualizar con:
+npm install -g @angular/cli@17.2.2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2.
+Bootstrap: Asegúrate de tener Bootstrap instalado. Puedes instalarlo con:
+npm install bootstrap
 
-## Development server
+## Instalación y Ejecución
+Clonar el Repositorio:
+git clone https://github.com/JohanTellez/prutec-marvel
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Instalar Dependencias:
+npm install
 
-## Code scaffolding
+Ejecutar el Servidor de Desarrollo:
+ng serve
+La aplicación estará disponible en http://localhost:4200.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+### Arquitectura del Proyecto
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Frontend
+ - Angular: Framework principal para la construcción de la interfaz de usuario.
+ - Componentes: La aplicación está organizada en componentes reutilizables (e.g., comics, comic-detail, favorites).
+ - Servicios: Servicios para la comunicación con la API y la lógica de negocio (e.g., MarvelApiService, AuthService, FavoritesService).
 
-## Running unit tests
+## Backend
+ - API Marvel: Utiliza la API pública de Marvel para obtener información sobre cómics.
+ - IndexedDB: Almacena información localmente en el navegador del usuario, como la lista de favoritos.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Detalles de Implementación
 
-## Running end-to-end tests
+# Componente AppComponent: Componente raíz con enrutamiento y componentes header y footer.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# Módulos:
+ - AppModule: Configuración de módulos de Angular, declaración de componentes y provisión de servicios.
 
-## Further help
+# Servicios:
+ - MarvelApiService: Comunicación con la API de Marvel.
+ - AuthService: Manejo de autenticación y estado de inicio de sesión.
+ - FavoritesService: Operaciones relacionadas con la lista de favoritos.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Enrutamiento:
+ - AppRoutingModule: Configuración de rutas y componentes asociados.
+
+# IndexDB:
+ - Almacenamiento de datos locales en el navegador.
+
+# Diseño y Estilos:
+ - Bootstrap: Para diseño y estilos.
