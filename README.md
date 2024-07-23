@@ -27,7 +27,7 @@ La aplicación estará disponible en http://localhost:4200.
 
 ## Backend
  - API Marvel: Utiliza la API pública de Marvel para obtener información sobre cómics.
- - IndexedDB: Almacena información localmente en el navegador del usuario, como la lista de favoritos.
+ - IndexedDB: Almacena información localmente en el navegador del usuario al momento de registrarlo, como la lista de favoritos.
 
 ## Detalles de Implementación
 
