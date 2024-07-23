@@ -1,0 +1,9 @@
+.card {
+  max-width: 100%;
+  margin: 0 auto;
+
+  .img-thumbnail {
+    max-height: auto;
+    object-fit: cover;
+  }
+}

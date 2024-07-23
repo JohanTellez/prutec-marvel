@@ -1,0 +1,26 @@
+.navbar {
+  background-color: #202020;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.navbar-brand {
+  color: #FFFFFF;
+}
+
+.nav-link {
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: #EC1D24;
+}
+
+.navbar-toggler {
+  border: none;
+}

@@ -1,0 +1,30 @@
+<div class="container mt-5">
+  <h2>Detalle del Cómic</h2>
+  <div *ngIf="loading" class="text-center">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Cargando...</span>
+    </div>
+  </div>
+  <div *ngIf="!loading && comic">
+    <div class="card">
+      <div class="row g-0">
+        <div class="col-md-4 text-center">
+          <img [src]="comic.thumbnail.path + '.' + comic.thumbnail.extension" class="img-fluid img-thumbnail" alt="{{ comic.title }}" style="max-width: 100%; height: auto;">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{ comic.title }}</h5>
+            <p class="card-text">{{ comic.description || 'Sin descripción' }}</p>
+            <p class="card-text"><strong>Serie:</strong> {{ comic.series.name }}</p>
+            <p class="card-text"><strong>Fecha de publicación:</strong> {{ publicationDate || 'No disponible' }}</p>
+            <p class="card-text"><strong>Formato:</strong> {{ comic.format }}</p>
+            <button (click)="goBack()" class="btn btn-secondary">Regresar</button>
+            <button (click)="toggleFavorite()" class="btn btn-outline-primary">
+              {{ isFavorite ? 'Quitar Favorito' : 'Agregar a Favoritos' }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

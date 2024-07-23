@@ -1,0 +1,18 @@
+.toast-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.toast-error {
+  background-color: #dc3545;
+  color: white;
+}
+
+.toast {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.toast-container {
+  z-index: 9999;
+}
